@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+    <PreferenceCategory android:title="@string/fnumber_preference">
+        <CheckBoxPreference
+                android:key="checkbox_fnumber_preference"
+                android:title="@string/fnumber_check_title_preference"
+                android:summary="@string/fnumber_check_summary_preference"
+                android:defaultValue="false" />
+         <ListPreference
+                android:key="list_fnumber_preference"
+                android:title="@string/fnumber_list_title_preference"
+                android:summary="@string/fnumber_list_summary_preference"
+                android:entries="@array/fnumber_list_preference"
+                android:entryValues="@array/fnumber_list_value_preference"
+                android:dialogTitle="@string/fnumber_list_title_preference"
+                android:defaultValue="@string/default_fnumber" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/iso_preference">
+         <ListPreference
+                android:key="list_iso_preference"
+                android:title="@string/iso_list_title_preference"
+                android:summary="@string/iso_list_summary_preference"
+                android:entries="@array/iso_list_preference"
+                android:entryValues="@array/iso_list_preference"
+                android:dialogTitle="@string/iso_list_title_preference" 
+                android:defaultValue="@string/default_iso"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/thumbnail">
+         <ListPreference
+                android:key="thumbnail_size_preference"
+                android:title="@string/thumbnail_size_title_preference"
+                android:summary="@string/thumbnail_size_summary_preference"
+                android:entries="@array/thumbnail_size_list_preference"
+                android:entryValues="@array/thumbnail_size_list_value_preference"
+                android:dialogTitle="@string/thumbnail_size_title_preference" 
+                android:defaultValue="@string/default_thumbnail_size"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/how_to_use">
+        <CheckBoxPreference
+                android:key="checkbox_show_usage"
+                android:title="@string/show_how_to_use"
+                android:summary="@string/show_how_to_use_dialog"
+                android:defaultValue="true" />
+    </PreferenceCategory>
+</PreferenceScreen>

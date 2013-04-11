@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Simple Reflected Light Meter</string>
+    <string name="action_settings">Preference</string>
+    <string name="exposure">Metering</string>
+    <string name="back">Back</string>
+    <string name="thumbnail">Thambnail</string>
+    <string name="exif_information">Exif information</string>
+	<string name="using_preference">(Using preference)</string>
+	<string name="exposure_time">Exposure time</string>
+	<string name="fnumber">FNumber</string>
+	<string name="iso_speed_ratings">ISO speed ratings</string>
+	<string name="how_to_use">How to use</string>
+	<string name="usage_explain_result">Use volume up/down keys for changing values.</string>
+	<string name="usage_explain_preview">Please set the ISO value setting Menu->Preference of the sensitivity of the film. Display the results by click the button while previewing the metering target.</string>
+	<string name="show_how_to_use">Show how to use</string>
+	<string name="show_how_to_use_dialog">Show how to use dialog.</string>
+    <!-- error -->
+    <string name="error_no_exifinformation">Jpeg image is output at the device don\'t have the exif information.</string>
+    <!-- preference -->
+    <string name="fnumber_preference">Camera FNumber preference</string>
+    <string name="fnumber_check_title_preference">This FNumber value is used</string>
+    <string name="fnumber_check_summary_preference">EV is calculated based on this Fnumber.</string>
+    <string name="fnumber_list_title_preference">FNumber value</string>
+    <string name="fnumber_list_summary_preference">This cammera FNumber(fixed)</string>
+    <string name="iso_preference">ISO</string>
+    <string name="iso_list_title_preference">ISO value</string>
+    <string name="iso_list_summary_preference">Set using film ISO value.</string>
+    <string name="thumbnail_size_title_preference">Size</string>
+    <string name="thumbnail_size_summary_preference">Thumbnail display size.</string>
+    <!-- default value-->
+    <string name="default_fnumber">280/100</string>
+    <string name="default_iso">100</string>
+    <string name="default_calc_fnumber">280/100</string>
+    <string name="default_thumbnail_size">240/180</string>
+</resources> 

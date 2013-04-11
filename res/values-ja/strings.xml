@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">簡易反射光露出計</string>
+    <string name="action_settings">設定</string>
+    <string name="exposure">測光</string>
+    <string name="back">戻る</string>
+    <string name="thumbnail">サムネイル</string>
+    <string name="exif_information">Exif情報</string>
+	<string name="using_preference">(設定値を使用)</string>
+	<string name="exposure_time">露光時間</string>
+	<string name="fnumber">F値</string>
+	<string name="iso_speed_ratings">ISO値</string>
+	<string name="how_to_use">使い方</string>
+	<string name="usage_explain_result">値を変更するにはボリュームのUp/Downキーを使用します。</string>
+	<string name="usage_explain_preview">フィルムの感度の設定はメニュー->設定でISO値の設定を行ってください。対象をプレビューした状態で測光ボタンを押すと結果を表示します。</string>
+	<string name="show_how_to_use">使い方を表示</string>
+	<string name="show_how_to_use_dialog">使い方のダイアログを表示します。</string>
+    <!-- error -->
+    <string name="error_no_exifinformation">このデバイスで出力されたJpegはExif情報を持っていません。</string>
+    <!-- preference -->
+    <string name="fnumber_preference">カメラのF値の設定</string>
+    <string name="fnumber_check_title_preference">固定のF値を使う</string>
+    <string name="fnumber_check_summary_preference">EVを計算するのにこのF値を使います。</string>
+    <string name="fnumber_list_title_preference">F値</string>
+    <string name="fnumber_list_summary_preference">このカメラのF値(固定)</string>
+    <string name="iso_preference">ISO</string>
+    <string name="iso_list_title_preference">ISO値</string>
+    <string name="iso_list_summary_preference">使用するフィルムのISO値</string>
+    <string name="thumbnail_size_title_preference">サイズ</string>
+    <string name="thumbnail_size_summary_preference">サムネイルの表示サイズ</string>
+</resources> 
