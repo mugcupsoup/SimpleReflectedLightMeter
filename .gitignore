@@ -8,13 +8,15 @@
 # Java class files
 *.class
 
+# Mac
+.DS_Store
+
 # generated files
-bin/
-gen/
+bin/res/*
+bin/classes
+bin/dexedLibs
 
 # Local configuration file (sdk path, etc)
 local.properties
 
-# Eclipse project files
-.classpath
-.project
+.metadata
