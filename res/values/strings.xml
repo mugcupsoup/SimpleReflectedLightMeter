@@ -22,7 +22,7 @@
     <string name="fnumber_check_title_preference">This FNumber value is used</string>
     <string name="fnumber_check_summary_preference">EV is calculated based on this Fnumber.</string>
     <string name="fnumber_list_title_preference">FNumber value</string>
-    <string name="fnumber_list_summary_preference">This cammera FNumber(fixed)</string>
+    <string name="fnumber_list_summary_preference">This camera FNumber(fixed)</string>
     <string name="iso_preference">ISO</string>
     <string name="iso_list_title_preference">ISO value</string>
     <string name="iso_list_summary_preference">Set using film ISO value.</string>
