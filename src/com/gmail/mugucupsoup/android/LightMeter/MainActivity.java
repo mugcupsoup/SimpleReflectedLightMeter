@@ -14,6 +14,7 @@ import com.gmail.mugucupsoup.android.Exif.*;
 import java.io.IOException;
 import java.util.HashMap;
 
+import android.media.AudioManager;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.view.LayoutInflater;
@@ -25,6 +26,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
@@ -39,6 +41,7 @@ public class MainActivity extends LightMeterActivity implements SurfaceHolder.Ca
 	SurfaceHolder surfaceHolder;
 	boolean previewing = false;
 	LayoutInflater controlInflater = null;
+	int silentMode;
 
 	final int RESULT_SAVEIMAGE = 0;
 
@@ -65,6 +68,9 @@ public class MainActivity extends LightMeterActivity implements SurfaceHolder.Ca
 		buttonTakePicture.setOnClickListener(new Button.OnClickListener() {
 			@Override
 			public void onClick(View arg0) {
+				AudioManager mgr = (AudioManager)getSystemService(Context.AUDIO_SERVICE);
+			    int streamType = AudioManager.STREAM_SYSTEM;
+			    mgr.setStreamSolo(streamType, true);
 				camera.takePicture(null, null, myPictureCallback_JPG);
 			}
 		});
@@ -134,6 +140,9 @@ public class MainActivity extends LightMeterActivity implements SurfaceHolder.Ca
 	PictureCallback myPictureCallback_JPG = new PictureCallback() {
 		@Override
 		public void onPictureTaken(byte[] arg0, Camera arg1) {
+			AudioManager mgr = (AudioManager)getSystemService(Context.AUDIO_SERVICE);
+		    int streamType = AudioManager.STREAM_SYSTEM;
+		    mgr.setStreamSolo(streamType, false);
 			readExif(arg0);
 			camera.startPreview();
 		}
