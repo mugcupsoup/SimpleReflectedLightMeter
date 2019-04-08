@@ -461,6 +461,7 @@ public class ExifInfomation implements  ExifConst{
 					str += (char)memstream.read();
 				}
 				if(!str.equals("Exif")){// exit if it isn't Exif
+					memstream.close();
 					return false;
 				}
 				while(true){
@@ -470,6 +471,7 @@ public class ExifInfomation implements  ExifConst{
 				byte2 = memstream.read();
 				tiffheadpos = memstream.getPos()-2;
 			}else{
+				memstream.close();
 				return false;
 			}
 		}
@@ -481,11 +483,13 @@ public class ExifInfomation implements  ExifConst{
 		}else if ( byte1 == 0x4d && byte2 == 0x4d ){ // MOTOROLA
 			this.littleEndian = false;
 		}else{
+			memstream.close();
 			return false;
 		}
 		
 		int id = this.readDByte(memstream);
 		if( id != 0x002a ){ // fixed value
+			memstream.close();
 			return false;
 		}
 		

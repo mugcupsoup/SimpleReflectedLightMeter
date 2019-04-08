@@ -63,15 +63,26 @@ public class MainActivity extends LightMeterActivity implements SurfaceHolder.Ca
 		View viewControl = controlInflater.inflate(R.layout.camera_control,null);
 		LayoutParams layoutParamsControl = new LayoutParams(LayoutParams.FILL_PARENT, LayoutParams.FILL_PARENT);
 		this.addContentView(viewControl, layoutParamsControl);
+		
+		final Context context = this;
 
 		Button buttonTakePicture = (Button) findViewById(R.id.exposure);
 		buttonTakePicture.setOnClickListener(new Button.OnClickListener() {
 			@Override
 			public void onClick(View arg0) {
 				AudioManager mgr = (AudioManager)getSystemService(Context.AUDIO_SERVICE);
-			    int streamType = AudioManager.STREAM_SYSTEM;
-			    mgr.setStreamSolo(streamType, true);
+				int streamType = AudioManager.STREAM_SYSTEM;
+				mgr.setStreamSolo(streamType, true);
 				camera.takePicture(null, null, myPictureCallback_JPG);
+			}
+		});
+
+		Button buttonOpenSettings = (Button) findViewById(R.id.settings);
+		buttonOpenSettings.setOnClickListener(new Button.OnClickListener() {
+			@Override
+			public void onClick(View arg0) {
+				Intent intent = new Intent(context,com.gmail.mugucupsoup.android.LightMeter.LightMeterPreferenceActivety.class);
+				startActivity(intent);
 			}
 		});
 		

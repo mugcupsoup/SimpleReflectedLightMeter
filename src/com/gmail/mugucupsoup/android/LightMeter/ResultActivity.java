@@ -15,6 +15,7 @@ import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
@@ -37,7 +38,9 @@ public class ResultActivity extends LightMeterActivity{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_result);
 		setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
-		
+
+		final Context context = this;
+
 		Button buttonTakePicture = (Button) findViewById(R.id.back);
 		buttonTakePicture.setOnClickListener(new Button.OnClickListener() {
 			@Override
@@ -45,7 +48,16 @@ public class ResultActivity extends LightMeterActivity{
 				backToPreview();
 			}
 		});
-		
+
+		Button buttonOpenSettings = (Button) findViewById(R.id.settings);
+		buttonOpenSettings.setOnClickListener(new Button.OnClickListener() {
+			@Override
+			public void onClick(View arg0) {
+				Intent intent = new Intent(context,com.gmail.mugucupsoup.android.LightMeter.LightMeterPreferenceActivety.class);
+				startActivity(intent);
+			}
+		});
+
         Intent intent = getIntent();
         exifInfo = (ExifInfo)intent.getSerializableExtra("ExposureTimeInfo");
         
