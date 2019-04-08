@@ -109,18 +109,28 @@
         android:layout_marginLeft="15dp"
         android:layout_marginTop="15dp"
         android:singleLine="false"
-        android:text="----" 
+        android:text="----"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
-	<Button
-	    android:id="@+id/back"
-	    android:layout_width="wrap_content"
-	    android:layout_height="wrap_content"
-	    android:layout_alignParentBottom="true"
-	    android:layout_alignParentRight="true"
-	    android:layout_margin="10dp"
-	    android:layout_marginBottom="10dp"
-	    android:layout_marginRight="10dp"
-	    android:text="@string/back" />
+    <Button
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        android:text="@string/back" />
+
+    <Button
+        android:id="@+id/settings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_toLeftOf="@id/back"
+        android:text="@string/action_settings" />
 
 </RelativeLayout>
